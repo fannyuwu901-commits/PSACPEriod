@@ -1,0 +1,566 @@
+/* ==========================================
+   HEADER DESCRIPTION
+   ========================================== */
+.header-description {
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 0 20px;
+}
+
+.header-description h1 {
+    font-size: 36px;
+    color: #2563eb;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.header-description p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* ==========================================
+   HEADER LOGO
+   ========================================== */
+   .header-contact {
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 10px 20px;
+}
+
+.header-contact h1 {
+    font-size: 30px;
+    color: #2563eb;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+/* CONTENEDOR DE LOGOS */
+.header-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    margin-top: 10px;
+}
+
+/* ESTILO DE LOS LOGOS */
+.header-logos img {
+    width: 80px;        /* ✔️ Más pequeño */
+    height: 80px;
+    object-fit: contain;
+    border-radius: 12px;
+    background: white;
+    padding: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.header-logos img:hover {
+    transform: scale(1.08);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+    .header-contact h1 {
+        font-size: 24px;
+    }
+
+    .header-logos img {
+        width: 65px;
+        height: 65px;
+    }
+}
+
+
+/* ==========================================
+   LAYOUT DE DOS COLUMNAS
+   ========================================== */
+.content-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    align-items: start;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.left-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* ==========================================
+   CONTENEDOR DEL MAPA
+   ========================================== */
+.map-container {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 400px;
+    border: none;
+    display: block;
+}
+
+/* ==========================================
+   TARJETAS DE INFORMACIÓN
+   ========================================== */
+.info-cards-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.info-card {
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    transition: all 0.3s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+.info-card-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    flex-shrink: 0;
+    background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+    color: white;
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+.info-card-icon.phone-icon {
+    background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+    box-shadow: 0 4px 12px rgba(34, 197, 94, 0.3);
+}
+
+.info-card-icon.location-icon {
+    background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+    box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3);
+}
+
+.info-card-content {
+    flex: 1;
+}
+
+.info-card-content h3 {
+    font-size: 18px;
+    color: #1f2937;
+    margin-bottom: 8px;
+    font-weight: 700;
+}
+
+.info-card-content p {
+    font-size: 14px;
+    color: #4b5563;
+    line-height: 1.6;
+    margin-bottom: 5px;
+}
+
+.info-card-content p:last-child {
+    margin-bottom: 0;
+}
+
+.phone-number {
+    font-size: 20px !important;
+    font-weight: 700 !important;
+}
+
+.phone-number a {
+    color: #22c55e;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.phone-number a:hover {
+    color: #16a34a;
+}
+
+.info-note {
+    font-size: 12px !important;
+    color: #9ca3af !important;
+    font-style: italic;
+    margin-top: 5px !important;
+}
+
+/* ==========================================
+   BANNER DE IMÁGENES
+   ========================================== */
+.images-banner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.banner-image {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    transition: all 0.3s ease;
+}
+
+.banner-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.banner-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* ==========================================
+   CONTENEDOR DEL FORMULARIO
+   ========================================== */
+.contact-container {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.contact-container h2 {
+    text-align: center;
+    color: #2563eb;
+    margin-bottom: 30px;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+/* ==========================================
+   FORMULARIO - ESTRUCTURA
+   ========================================== */
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* ==========================================
+   FORMULARIO - INPUTS Y LABELS
+   ========================================== */
+.contact-container label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #333;
+    font-size: 14px;
+}
+
+.contact-container input,
+.contact-container textarea {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 15px;
+    font-family: inherit;
+    transition: all 0.3s ease;
+    background: #fafafa;
+    box-sizing: border-box;
+}
+
+.contact-container input:focus,
+.contact-container textarea:focus {
+    outline: none;
+    border-color: #2563eb;
+    background: white;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.contact-container textarea {
+    resize: vertical;
+    min-height: 150px;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+/* ==========================================
+   BOTÓN DE ENVÍO
+   ========================================== */
+.button-send {
+    margin-top: 15px;
+    width: 100%;
+    padding: 16px;
+    background: #2563eb;
+    border: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+}
+
+.button-send:hover:not(:disabled) {
+    background: #1d4ed8;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4);
+}
+
+.button-send:active:not(:disabled) {
+    transform: translateY(0);
+}
+
+.button-send:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.button-send.loading {
+    background: #777 !important;
+    cursor: not-allowed;
+}
+
+/* ==========================================
+   MENSAJES DE ESTADO
+   ========================================== */
+#status {
+    margin-top: 20px;
+    font-weight: 600;
+    text-align: center;
+    padding: 15px;
+    border-radius: 10px;
+    display: none;
+    animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.status-loading {
+    background: #fff3cd;
+    color: #856404;
+    border-left: 4px solid #ffc107;
+    display: block;
+}
+
+.status-success {
+    background: #d4edda;
+    color: #155724;
+    border-left: 4px solid #28a745;
+    display: block;
+}
+
+.status-error {
+    background: #f8d7da;
+    color: #721c24;
+    border-left: 4px solid #dc3545;
+    display: block;
+}
+
+/* ==========================================
+   SEPARADOR (HR)
+   ========================================== */
+.contact-container hr {
+    margin: 35px 0 25px 0;
+    border: none;
+    border-top: 2px solid #f0f0f0;
+}
+
+/* ==========================================
+   REDES SOCIALES
+   ========================================== */
+.social-section {
+    text-align: center;
+    margin-top: 25px;
+}
+
+.social-section h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #333;
+    font-weight: 600;
+}
+
+.social-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.social-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 28px;
+    color: white;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.social-btn:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Colores de redes sociales */
+.instagram {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+}
+
+.facebook {
+    background: #1877F2;
+}
+
+.youtube {
+    background: #FF0000;
+}
+
+/* ==========================================
+   RESPONSIVE DESIGN
+   ========================================== */
+
+/* Tablets y pantallas medianas */
+@media (max-width: 1024px) {
+    .content-wrapper {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .left-column {
+        order: -1;
+    }
+
+    .map-container iframe {
+        height: 350px;
+    }
+
+    .images-banner {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* Móviles */
+@media (max-width: 600px) {
+    .header-description h1 {
+        font-size: 28px;
+    }
+
+    .header-description p {
+        font-size: 14px;
+    }
+
+    .content-wrapper {
+        padding: 0 10px;
+    }
+
+    .contact-container {
+        padding: 25px 20px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .contact-container h2 {
+        font-size: 24px;
+    }
+
+    .social-btn {
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
+    }
+
+    .social-container {
+        gap: 15px;
+    }
+
+    .map-container iframe {
+        height: 300px;
+    }
+
+    .info-card {
+        padding: 15px;
+    }
+
+    .info-card-icon {
+        width: 45px;
+        height: 45px;
+        font-size: 20px;
+    }
+
+    .phone-number {
+        font-size: 18px !important;
+    }
+
+    .images-banner {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Pantallas muy pequeñas */
+@media (max-width: 380px) {
+    .contact-container {
+        padding: 20px 15px;
+    }
+
+    .button-send {
+        padding: 14px;
+        font-size: 14px;
+    }
+
+    .social-btn {
+        width: 45px;
+        height: 45px;
+        font-size: 20px;
+    }
+
+    .info-card-content h3 {
+        font-size: 16px;
+    }
+}
