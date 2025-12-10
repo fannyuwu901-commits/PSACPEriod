@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="theme-color" content="#4ADE80">
     <title>Periódico PSAC</title>
-    
+
     <!-- CSS -->
     <link rel="stylesheet" href="../css/style_index.css">
     <link rel="stylesheet" href="../css/notification_system.css">
     <link rel="stylesheet" href="../css/sidebar_common.css">
     <link rel="stylesheet" href="../css/grid_index.css">
     <link rel="stylesheet" href="../css/style_coments.css">
+    <link rel="stylesheet" href="../css/clima_system.css">
 </head>
 
 <body>
@@ -57,7 +59,7 @@
                 <img class="nav-icon" src="../svg/grupo.png" alt="">
                 <span>Sobre nosotros</span>
             </a>
-            
+
             <div class="section-divider" id="section-publicar">
                 <div class="section-header" onclick="toggleSection('publicar')">
                     <span>Publicar</span>
@@ -69,7 +71,7 @@
                     <button class="btn btn-red" onclick="window.location.href='editar.html'">Editar</button>
                 </div>
             </div>
-            
+
             <div class="section-divider" id="section-admtools">
                 <div class="section-header" onclick="toggleSection('admtools')">
                     <span>ADM. tools</span>
@@ -79,7 +81,7 @@
                     <button class="btn btn-green-light" onclick="window.location='usuarios.html'">Nuevo editor</button>
                 </div>
             </div>
-            
+
             <div class="section-divider">
                 <div class="section-header">Filtros por área</div>
                 <div class="section-content">
@@ -143,9 +145,9 @@
 
         <button class="ingresar-btn" onclick="window.location.href='login.html'">Ingresar</button>
     </aside>
-    
+
     <div class="divider-line" id="dividerLine"></div>
-    
+
     <!-- CONTENEDOR PRINCIPAL -->
     <div class="main-container">
         <header>
@@ -166,6 +168,15 @@
             </div>
         </header>
 
+        <div class="weather-date-box">
+            <div id="fechaActual">Cargando fecha...</div>
+            <div id="climaActual">
+                <span id="ciudad">—</span> |
+                <span id="temperatura">— °C</span> |
+                <span id="descripcion">—</span>
+            </div>
+        </div>
+
         <div class="destacadas-section">
             <div class="destacadas-header">
                 <img class="star-icon" src="../svg/star.png" alt="">
@@ -177,17 +188,19 @@
             </div>
             <div class="destacadas-content" id="carouselDestacadas"></div>
         </div>
-        
+
         <div class="body-content" id="publicaciones"></div>
     </div>
 
     <!-- SCRIPTS -->
-     <script src="../js/comentarios_auth_guard.js"></script>
+    <script src="../js/comentarios_auth_guard.js"></script>
     <script src="../js/notification_system.js"></script>
     <script src="../js/comentarios.js"></script>
     <script src="../js/scrypt_index.js"></script>
     <script src="../js/sidebar_common.js"></script>
     <script src="../js/sidebar_toggle.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../js/clima_system.js"></script>
 </body>
+
 </html>

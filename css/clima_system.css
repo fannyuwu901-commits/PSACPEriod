@@ -1,0 +1,15 @@
+.weather-date-box {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #f0fdf4;
+            padding: 8px 16px;
+            border-radius: 8px;
+            margin: 12px 0;
+            font-size: 14px;
+            color: #065f46;
+        }
+        #climaActual {
+            font-weight: 600;
+            text-transform: capitalize;
+        }
