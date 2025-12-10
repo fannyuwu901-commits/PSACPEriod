@@ -1,0 +1,108 @@
+:root {
+    --salesiano-azul: #003DA5;
+    --salesiano-azul-oscuro: #002770;
+    --salesiano-dorado: #FFB81C;
+    --salesiano-celeste: #4A90E2;
+    --salesiano-gris: #F5F7FA;
+    --salesiano-blanco: #FFFFFF;
+}
+
+/* SECCIONES */
+section {
+    width: 90%;
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 50px 60px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(0,61,165,0.15);
+    border: 3px solid var(--salesiano-gris);
+    border-top: 8px solid var(--salesiano-azul);
+    position: relative;
+}
+section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 150px;
+    height: 150px;
+    background: url('https://upload.wikimedia.org/wikipedia/commons/8/89/Salesians_of_Don_Bosco_logo.svg') no-repeat;
+    background-size: contain;
+    opacity: 0.08;
+}
+
+/* TITULOS */
+section h1,
+section h2 {
+    color: var(--salesiano-azul);
+    letter-spacing: 1px;
+    font-weight: 800;
+    text-transform: uppercase;
+    padding-bottom: 15px;
+    font-family: 'Georgia', serif;
+}
+
+section h1 {
+    font-size: 36px;
+    text-align: center;
+    background: linear-gradient(135deg, var(--salesiano-azul), var(--salesiano-celeste));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* TEXTO */
+section p {
+    font-size: 17px;
+    line-height: 1.9;
+    margin-bottom: 25px;
+    color: #2c3e50;
+    text-align: justify;
+}
+
+/* LISTAS */
+section ul {
+    padding-left: 0;
+}
+
+section li {
+    list-style: none;
+    padding-left: 40px;
+    margin-bottom: 18px;
+    position: relative;
+}
+
+section li::before {
+    content: '✦';
+    position: absolute;
+    left: 0;
+    color: var(--salesiano-dorado);
+    font-size: 22px;
+}
+
+/* IMAGENES SALESIANAS */
+.contenedor-imagen {
+    text-align: center;
+    margin: 30px 0;
+}
+.imagen-salesiana {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,61,165,0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.imagen-salesiana:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 12px 40px rgba(0,61,165,0.35);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    section {
+        padding: 25px;
+    }
+    section h1 {
+        font-size: 28px;
+    }
+}

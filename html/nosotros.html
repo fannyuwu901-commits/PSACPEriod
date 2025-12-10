@@ -9,8 +9,7 @@
     <title>Sobre nosotros</title>
     <link rel="stylesheet" href="../css/style_index.css">
     <link rel="stylesheet" href="../css/style_nosotros.css">
-      <link rel="stylesheet" href="../css/sidebar_common.css">
-     
+    <link rel="stylesheet" href="../css/style_salesianos.css">
     <script src="../js/auth_guard.js"></script>
 </head>
 
@@ -18,46 +17,40 @@
     <aside>
         <nav class="nav-menu">
             <a href="index.html" class="nav-item">
-                <img class="nav-icon" src="../svg/home.png" alt="" aria-hidden="true">
+                <img class="nav-icon" src="../svg/home.png" alt="">
                 <span>Inicio</span>
             </a>
             <a href="calendario.html" class="nav-item">
-                <img class="nav-icon" src="../svg/calendar.png" alt="" aria-hidden="true">
+                <img class="nav-icon" src="../svg/calendar.png" alt="">
                 <span>Calendario</span>
             </a>
             <a href="contactanos.html" class="nav-item">
-                <img class="nav-icon" src="../svg/paper-plane.png" alt="" aria-hidden="true">
+                <img class="nav-icon" src="../svg/paper-plane.png" alt="">
                 <span>Contáctanos</span>
             </a>
             <a href="noticias.html" class="nav-item">
-                <img class="nav-icon" src="../svg/bolt.png" alt="" aria-hidden="true">
+                <img class="nav-icon" src="../svg/bolt.png" alt="">
                 <span>Noticias</span>
             </a>
             <a href="galeria.html" class="nav-item">
-                <img class="nav-icon" src="../svg/star.png" alt="" aria-hidden="true">
+                <img class="nav-icon" src="../svg/star.png" alt="">
                 <span>Galería</span>
             </a>
             <a href="editores.html" class="nav-item">
-                <img class="nav-icon" src="../svg/admin-alt.png" alt="" aria-hidden="true">
+                <img class="nav-icon" src="../svg/admin-alt.png" alt="">
                 <span>Editores</span>
             </a>
             <a href="nosotros.html" class="nav-item">
-                <img class="nav-icon" src="../svg/search.png" alt="" aria-hidden="true">
+                <img class="nav-icon" src="../svg/search.png" alt="">
                 <span>Sobre nosotros</span>
             </a>
-
         </nav>
 
-        <!-- CONTENEDOR DE USUARIO-->
         <div id="userInfo" style="padding: 20px; border-top: 2px solid #e5e7eb; margin-top: auto; display: none;">
-            <div id="userAvatar">
-                <!-- Se llena dinámicamente con JavaScript -->
-            </div>
+            <div id="userAvatar"></div>
         </div>
-
-
     </aside>
-    
+
     <div class="main-container">
         <header>
             <div class="logo-section">
@@ -74,36 +67,52 @@
         </header>
 
         <section class="pagina">
+            <!-- SOBRE NOSOTROS -->
             <section class="sobre">
                 <h1>Sobre Nosotros</h1>
-                <p>Somos un centro salesiano dedicado a formar jóvenes con una educación de calidad basada en
-                    competencias
+                <p>Somos un centro salesiano dedicado a formar jóvenes con una educación de calidad basada en competencias
                     humanísticas, científicas, tecnológicas y vocacionales, siempre guiados por los valores cristianos.
                 </p>
+                <div class="contenedor-imagen">
+                    <img class="imagen-salesiana"
+                        src="hhttps://lh4.googleusercontent.com/-UGpR_8cw4g4/TyZXJn6vGcI/AAAAAAABZ7U/LampfkCHIdQ/s288/SanJuanBosco.jpg"
+                        alt="Logo Salesiano">
+                    <figcaption>Logo Salesiano de Don Bosco</figcaption>
+                </div>
             </section>
 
-
+            <!-- HISTORIA -->
             <section class="historia">
                 <h2>Nuestra Historia</h2>
                 <p>El Politécnico Salesiano Arquides Calderón fue fundado el 4 de agosto del 2016 bajo el nombre del
                     profesor Vinicio Arquides Calderón Lozano. Su apertura ocurrió durante la gestión del ministro
-                    Carlos
-                    Amarante Baret y con la dirección distrital del Lic. Flérido Antonio Martínez.</p>
+                    Carlos Amarante Baret y con la dirección distrital del Lic. Flérido Antonio Martínez.</p>
+                <div class="contenedor-imagen">
+                    <img class="imagen-salesiana"
+                        src="https://upload.wikimedia.org/wikipedia/commons/e/e1/Don_Bosco_-_Roma.jpg"
+                        alt="Don Bosco">
+                    <figcaption>San Juan Bosco, fundador de los Salesianos</figcaption>
+                </div>
             </section>
 
-
+            <!-- MISION Y VISION -->
             <section class="mision-vision">
                 <h2>Misión</h2>
                 <p>Somos una institución salesiana que brinda un servicio educativo de calidad, respondiendo a las
                     necesidades de la provincia y aportando a la sociedad “Honrados Ciudadanos y Buenos Cristianos”.</p>
-
+                <div class="contenedor-imagen">
+                    <img class="imagen-salesiana"
+                        src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Salesian_Youth.jpg"
+                        alt="Educación Salesiana">
+                    <figcaption>Formación y educación salesiana</figcaption>
+                </div>
 
                 <h2>Visión</h2>
                 <p>Formar jóvenes con competencias técnicas y humanas que les permitan insertarse en el ámbito laboral,
                     siguiendo el estilo pedagógico salesiano.</p>
             </section>
 
-
+            <!-- VALORES -->
             <section class="valores">
                 <h2>Valores</h2>
                 <ul>
@@ -113,12 +122,19 @@
                     <li>Alegría</li>
                     <li>Honestidad</li>
                 </ul>
+                <div class="contenedor-imagen">
+                    <img class="imagen-salesiana"
+                        src="https://upload.wikimedia.org/wikipedia/commons/3/3d/Salesian_Community.jpg"
+                        alt="Comunidad Salesiana">
+                    <figcaption>Comunidad Salesiana en actividad educativa</figcaption>
+                </div>
             </section>
         </section>
     </div>
-        <script src="../js/sidebar_toggle.js"></script>
+
+    <script src="../js/sidebar_toggle.js"></script>
     <script src="../js/sidebar_common.js"></script>
-       <script src="../js/scrypt_index.js"></script>
+    <script src="../js/scrypt_index.js"></script>
 </body>
 
 </html>
