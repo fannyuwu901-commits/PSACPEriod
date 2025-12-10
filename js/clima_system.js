@@ -5,7 +5,7 @@ function mostrarFecha() {
     const ahora = new Date();
     const opciones = { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' };
     let fecha = ahora.toLocaleDateString('es-ES', opciones);
-    fecha = fecha.charAt(0).toUpperCase() + fecha.slice(1);
+    fecha = "📅" +fecha.charAt(0).toUpperCase() + fecha.slice(1);
     document.getElementById("fechaActual").textContent = fecha;
 }
 
@@ -20,7 +20,7 @@ function obtenerClima() {
             .then(r => r.json())
             .then(data => {
                 document.getElementById("ciudad").textContent = data.name;
-                document.getElementById("temperatura").textContent = Math.round(data.main.temp) + " °C";
+                document.getElementById("temperatura").textContent = Math.round(data.main.temp) + " °C🌤️";
                 document.getElementById("descripcion").textContent = data.weather[0].description;
             });
     });

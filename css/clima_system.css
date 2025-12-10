@@ -2,12 +2,12 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background: #f0fdf4;
+            background: #f6fcf8;
             padding: 8px 16px;
             border-radius: 8px;
             margin: 12px 0;
             font-size: 14px;
-            color: #065f46;
+            color: #78b8a2;
         }
         #climaActual {
             font-weight: 600;
