@@ -14,7 +14,7 @@ html {
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Playfair Display', serif;
     display: flex;
     min-height: 100vh;
     overflow-x: hidden;
@@ -288,7 +288,7 @@ aside::-webkit-scrollbar-thumb:hover {
     display: none;
 }
 
-.filter-item input[type="checkbox"]:checked + .checkbox-custom {
+.filter-item input[type="checkbox"]:checked+.checkbox-custom {
     border-color: transparent;
 }
 
@@ -304,7 +304,7 @@ aside::-webkit-scrollbar-thumb:hover {
     display: none;
 }
 
-.filter-item input[type="checkbox"]:checked + .checkbox-custom .check-mark {
+.filter-item input[type="checkbox"]:checked+.checkbox-custom .check-mark {
     display: block;
 }
 
@@ -419,7 +419,7 @@ aside::-webkit-scrollbar-thumb:hover {
     z-index: 998;
 }
 
-aside.active ~ .divider-line {
+aside.active~.divider-line {
     left: 280px;
 }
 
@@ -440,8 +440,9 @@ aside.active ~ .divider-line {
 /* ==========================================
    13. HEADER
    ========================================== */
-header {
+header, header* {
     background: white;
+    font-family: 'Playfair Display', serif !important;
     padding: 15px 20px 15px 80px;
     display: flex;
     justify-content: space-between;
@@ -851,16 +852,45 @@ header {
 /* ==========================================
    18. COLORES POR ÁREA
    ========================================== */
-.area-Informática { --area-color: #FCD34D; }
-.area-Mercadeo { --area-color: #FB923C; }
-.area-Contabilidad { --area-color: #EF4444; }
-.area-Logística { --area-color: #4ADE80; }
-.area-Turismo { --area-color: #22D3EE; }
-.area-Acondicionamiento { --area-color: #0e004b; }
-.area-Lengua { --area-color: #6366F1; }
-.area-Matemáticas { --area-color: #A855F7; }
-.area-Sociales { --area-color: #D946EF; }
-.area-Naturales { --area-color: #22C55E; }
+.area-Informática {
+    --area-color: #FCD34D;
+}
+
+.area-Mercadeo {
+    --area-color: #FB923C;
+}
+
+.area-Contabilidad {
+    --area-color: #EF4444;
+}
+
+.area-Logística {
+    --area-color: #4ADE80;
+}
+
+.area-Turismo {
+    --area-color: #22D3EE;
+}
+
+.area-Acondicionamiento {
+    --area-color: #0e004b;
+}
+
+.area-Lengua {
+    --area-color: #6366F1;
+}
+
+.area-Matemáticas {
+    --area-color: #A855F7;
+}
+
+.area-Sociales {
+    --area-color: #D946EF;
+}
+
+.area-Naturales {
+    --area-color: #22C55E;
+}
 
 /* ==========================================
    19. PREVENIR SELECCIÓN NO DESEADA
@@ -879,34 +909,34 @@ header {
     body {
         font-size: 14px;
     }
-    
+
     .menu-toggle {
         width: 45px;
         height: 45px;
         top: 15px;
         left: 15px;
     }
-    
+
     header {
         padding: 12px 15px 12px 70px;
     }
-    
+
     .logo-icon {
         width: 40px;
         height: 40px;
         min-width: 40px;
         min-height: 40px;
     }
-    
+
     .logo-icon svg {
         width: 24px;
         height: 24px;
     }
-    
+
     .logo-text {
         font-size: 18px;
     }
-    
+
     .search-box {
         width: 100%;
         max-width: 100%;
@@ -914,35 +944,35 @@ header {
         flex-basis: 100%;
         margin-top: 10px;
     }
-    
+
     .destacadas-section,
     .body-content {
         margin: 10px;
         padding: 15px;
     }
-    
+
     .destacadas-header h2 {
         font-size: 20px;
     }
-    
+
     .star-icon {
         width: 24px;
         height: 24px;
     }
-    
+
     .card {
         padding: 12px;
     }
-    
+
     .body-content {
         min-height: calc(100vh - 250px);
     }
-    
+
     .dest-item {
         width: 160px;
         min-width: 160px;
     }
-    
+
     .destacadas-content {
         touch-action: pan-x;
         -webkit-user-select: none;
@@ -957,28 +987,28 @@ header {
     header {
         padding: 15px 20px 15px 75px;
     }
-    
+
     .logo-icon {
         width: 45px;
         height: 45px;
         min-width: 45px;
         min-height: 45px;
     }
-    
+
     .logo-text {
         font-size: 22px;
     }
-    
+
     .destacadas-section,
     .body-content {
         margin: 15px;
         padding: 20px;
     }
-    
+
     .body-content {
         min-height: calc(100vh - 300px);
     }
-    
+
     .dest-item {
         width: 170px;
         min-width: 170px;
@@ -992,27 +1022,27 @@ header {
     .menu-toggle {
         display: flex;
     }
-    
+
     aside {
         left: -280px;
     }
-    
+
     aside.active {
         left: 0;
     }
-    
+
     .main-container {
         margin-left: 0;
     }
-    
+
     .divider-line {
         left: 0;
     }
-    
-    aside.active ~ .divider-line {
+
+    aside.active~.divider-line {
         left: 280px;
     }
-    
+
     .body-content {
         min-height: calc(100vh - 280px);
     }
@@ -1025,54 +1055,57 @@ header {
     .menu-toggle {
         display: flex;
     }
-    
+
     aside {
         left: -280px;
     }
-    
+
     aside.active {
         left: 0;
     }
-    
+
     .main-container {
         margin-left: 0;
     }
-    
+
     header {
         padding: 20px 40px 20px 80px;
     }
-    
+
     .logo-icon {
         width: 60px;
         height: 60px;
         min-width: 60px;
         min-height: 60px;
     }
-    
+
     .logo-icon svg {
         width: 40px;
         height: 40px;
     }
-    
+
     .logo-text {
+        font-family: 'Playfair Display', serif !important;
         font-size: 36px;
+        font-weight: 700;
+        text-align: center;
     }
-    
+
     .destacadas-section,
     .body-content {
         margin: 20px;
         padding: 30px;
     }
-    
+
     .destacadas-header h2 {
         font-size: 32px;
     }
-    
+
     .star-icon {
         width: 35px;
         height: 35px;
     }
-    
+
     .body-content {
         min-height: calc(100vh - 350px);
     }
