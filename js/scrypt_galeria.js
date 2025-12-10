@@ -44,7 +44,7 @@ function mostrarGaleria(archivos) {
 
     grid.innerHTML = archivos.map(archivo => {
         const tipo = archivo.tipo === 'imagen' ? 'imagen' : 'video';
-        const icono = tipo === 'imagen' ? '🖼️' : '🎥';
+        const icono = tipo === 'imagen';
         const badge = tipo === 'imagen' ? 'Imagen' : 'Video';
         const badgeClass = tipo === 'imagen' ? '' : 'video';
         const url = `../Connection/uploads/${archivo.ruta}`;
@@ -62,10 +62,10 @@ function mostrarGaleria(archivos) {
                     <span class="tipo-badge ${badgeClass}">${badge}</span>
                 </div>
                 <div class="galeria-item-info">
-                    <div class="galeria-item-area">📁 ${archivo.area || 'General'}</div>
+                    <div class="galeria-item-area">${archivo.area || 'General'}</div>
                     <div class="galeria-item-title">${archivo.descripcion || 'Sin descripción'}</div>
                     <div class="galeria-item-meta">
-                        <span>📅 ${formatearFecha(archivo.fecha)}</span>
+                        <span>${formatearFecha(archivo.fecha)}</span>
                     </div>
                 </div>
             </div>

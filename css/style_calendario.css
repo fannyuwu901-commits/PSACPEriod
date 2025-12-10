@@ -10,13 +10,13 @@
 
 /* Hero Section */
 .calendario-hero {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #ffbb55 0%, #a2864b 100%);
     border-radius: 20px;
     padding: 60px 40px;
     text-align: center;
     color: white;
     margin-bottom: 40px;
-    box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+    box-shadow: 0 10px 30px rgba(164, 172, 62, 0.3);
 }
 
 .calendario-hero h1 {
@@ -626,5 +626,139 @@
     
     .modal-evento-content {
         width: 95%;
+    }
+}
+
+/* ==========================================
+   MEJORAS RESPONSIVE ADICIONALES
+   ========================================== */
+
+/* Tablets medianas */
+@media (max-width: 900px) {
+
+    .calendario-hero {
+        padding: 40px 20px;
+    }
+
+    .calendario-hero h1 {
+        font-size: 30px;
+    }
+
+    .calendario-layout {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .eventos-sidebar {
+        max-height: none;
+    }
+
+    .calendario-grid {
+        gap: 5px;
+    }
+
+    .dia {
+        min-height: 70px;
+    }
+}
+
+/* Tablets pequeñas y móviles grandes */
+@media (max-width: 650px) {
+
+    .calendario-hero h1 {
+        font-size: 26px;
+    }
+
+    .calendario-hero p {
+        font-size: 15px;
+    }
+
+    .calendario-header {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .btn-today,
+    .btn-nuevo-evento {
+        width: 100%;
+    }
+
+    .calendario-grid {
+        grid-template-columns: repeat(7, minmax(40px, 1fr));
+    }
+
+    .dia {
+        padding: 4px;
+        min-height: 55px;
+    }
+
+    .dia-numero {
+        font-size: 12px;
+    }
+
+    .eventos-header h3 {
+        font-size: 16px;
+    }
+
+    .evento-item {
+        padding: 12px;
+    }
+}
+
+/* Móviles pequeños */
+@media (max-width: 480px) {
+
+    .calendario-container {
+        padding: 10px;
+    }
+
+    .calendario-hero {
+        padding: 30px 15px;
+        border-radius: 15px;
+    }
+
+    .calendario-hero h1 {
+        font-size: 22px;
+    }
+
+    .calendario-hero p {
+        font-size: 14px;
+    }
+
+    .calendario-grid {
+        gap: 3px;
+        grid-template-columns: repeat(7, minmax(32px, 1fr));
+    }
+
+    .dia {
+        min-height: 45px;
+        border-radius: 8px;
+    }
+
+    .dia-numero {
+        font-size: 11px;
+    }
+
+    .evento-item {
+        padding: 10px;
+    }
+
+    .modal-evento-content {
+        width: 98%;
+        padding: 0;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .btn-cancelar,
+    .btn-guardar,
+    .btn-editar,
+    .btn-eliminar {
+        padding: 10px;
+        font-size: 14px;
     }
 }
