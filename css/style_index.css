@@ -14,7 +14,7 @@ html {
 }
 
 body {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Inter', sans-serif;
     display: flex;
     min-height: 100vh;
     overflow-x: hidden;
@@ -440,9 +440,8 @@ aside.active~.divider-line {
 /* ==========================================
    13. HEADER
    ========================================== */
-header, header* {
+header {
     background: white;
-    font-family: 'Playfair Display', serif !important;
     padding: 15px 20px 15px 80px;
     display: flex;
     justify-content: space-between;
@@ -477,6 +476,7 @@ header, header* {
 }
 
 .logo-text {
+    font-family: 'arial black', serif;
     font-size: 24px;
     font-weight: bold;
     white-space: nowrap;
