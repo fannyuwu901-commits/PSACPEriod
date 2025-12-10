@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Papelera - Periódico PSAC</title>
+    <link rel="stylesheet" href="../css/style_index.css">
+    <link rel="stylesheet" href="../css/sidebar_common.css">
+    <link rel="stylesheet" href="../css/notification_system.css">
+    <link rel="stylesheet" href="../css/style_papelera.css">
+    <script src="../js/notification_system.js"></script>
+</head>
+
+<body>
+    <!-- Botón hamburguesa -->
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <!-- Overlay -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- SIDEBAR -->
+    <aside>
+        <nav class="nav-menu">
+            <a href="index.html" class="nav-item">
+                <img class="nav-icon" src="../svg/hogar.png" alt="">
+                <span>Inicio</span>
+            </a>
+            <a href="calendario.html" class="nav-item">
+                <img class="nav-icon" src="../svg/calendario.png" alt="">
+                <span>Calendario</span>
+            </a>
+            <a href="contactanos.html" class="nav-item">
+                <img class="nav-icon" src="../svg/contactanos.png" alt="">
+                <span>Contáctanos</span>
+            </a>
+            <a href="noticias.html" class="nav-item">
+                <img class="nav-icon" src="../svg/periodico.png" alt="">
+                <span>Noticias</span>
+            </a>
+            <a href="galeria.html" class="nav-item">
+                <img class="nav-icon" src="../svg/galeria-de-fotos.png" alt="">
+                <span>Galería</span>
+            </a>
+            <a href="editores.html" class="nav-item">
+                <img class="nav-icon" src="../svg/editor-de-texto.png" alt="">
+                <span>Editores</span>
+            </a>
+            <a href="nosotros.html" class="nav-item">
+                <img class="nav-icon" src="../svg/grupo.png" alt="">
+                <span>Sobre nosotros</span>
+            </a>
+
+            <div class="section-divider" id="section-publicar">
+                <div class="section-header" onclick="toggleSection('publicar')">
+                    <span>Publicar</span>
+                    <span class="arrow" id="arrow-publicar">▼</span>
+                </div>
+                <div class="section-content collapsed" id="publicar">
+                    <button class="btn btn-yellow" onclick="window.location.href='subir.html'">Subir</button>
+                    <button class="btn btn-orange" id="btnEliminar">Eliminar</button>
+                    <button class="btn btn-red" onclick="window.location.href='editar.html'">Editar</button>
+                </div>
+            </div>
+
+            <div class="section-divider" id="section-admtools">
+                <div class="section-header" onclick="toggleSection('admtools')">
+                    <span>ADM. tools</span>
+                    <span class="arrow" id="arrow-admtools">▼</span>
+                </div>
+                <div class="section-content collapsed" id="admtools">
+                    <button class="btn btn-green-light" onclick="window.location='usuarios.html'">Nuevo editor</button>
+                    <button class="btn btn-red" onclick="window.location='papelera.html'">🗑️ Papelera</button>
+                </div>
+            </div>
+        </nav>
+
+        <div id="userInfo" style="padding: 20px; border-top: 2px solid #e5e7eb; margin-top: auto; display: none;">
+            <div id="userAvatar"></div>
+        </div>
+
+        <button class="ingresar-btn" onclick="window.location.href='login.html'">Ingresar</button>
+    </aside>
+
+    <div class="divider-line" id="dividerLine"></div>
+
+    <!-- CONTENEDOR PRINCIPAL -->
+    <div class="main-container">
+        <header>
+            <div class="logo-section">
+                <div class="logo-icon">
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                </div>
+                <h1 class="logo-text">🗑️ Papelera</h1>
+            </div>
+        </header>
+
+        <div class="body-content">
+            <div class="papelera-container">
+                <!-- Hero Section -->
+                <div class="papelera-hero">
+                    <h1>🗑️ Papelera</h1>
+                    <p>Gestiona los elementos eliminados. Puedes restaurarlos o eliminarlos permanentemente</p>
+                </div>
+
+                <!-- Header con estadísticas -->
+                <div class="papelera-header">
+                    <div>
+                        <h2>Elementos Eliminados</h2>
+                        <div class="papelera-info">
+                            <div class="papelera-stat">
+                                <div class="papelera-stat-value" id="totalItems">0</div>
+                                <div class="papelera-stat-label">Total en papelera</div>
+                            </div>
+                            <div class="papelera-stat">
+                                <div class="papelera-stat-value" id="publicacionesCount">0</div>
+                                <div class="papelera-stat-label">Publicaciones</div>
+                            </div>
+                            <div class="papelera-stat">
+                                <div class="papelera-stat-value" id="noticiasCount">0</div>
+                                <div class="papelera-stat-label">Noticias</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="papelera-actions">
+                        <button class="btn-filtro-papelera active" onclick="filtrarPapelera('todos')">
+                            📋 Todos
+                        </button>
+                        <button class="btn-filtro-papelera" onclick="filtrarPapelera('publicaciones')">
+                            📝 Publicaciones
+                        </button>
+                        <button class="btn-filtro-papelera" onclick="filtrarPapelera('noticias')">
+                            📰 Noticias
+                        </button>
+                        <button class="btn-vaciar-papelera" onclick="vaciarPapelera()">
+                            🗑️ Vaciar Papelera
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Grid de papelera -->
+                <div class="papelera-grid" id="papeleraGrid">
+                    <div class="papelera-loading">
+                        <div class="spinner-papelera"></div>
+                        <p>Cargando papelera...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de confirmación -->
+    <div class="modal-confirmar" id="modalConfirmar">
+        <div class="modal-confirmar-content">
+            <div class="modal-confirmar-icon">⚠️</div>
+            <div class="modal-confirmar-titulo" id="modalTitulo">¿Estás seguro?</div>
+            <div class="modal-confirmar-texto" id="modalTexto">Esta acción no se puede deshacer</div>
+            <div class="modal-confirmar-acciones">
+                <button class="btn-no" onclick="cerrarModal()">Cancelar</button>
+                <button class="btn-si" id="btnConfirmar" onclick="confirmarAccion()">Eliminar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/scrypt_papelera.js"></script>
+    <script src="../js/sidebar_common.js"></script>
+    <script src="../js/sidebar_toggle.js"></script>
+</body>
+
+</html>
