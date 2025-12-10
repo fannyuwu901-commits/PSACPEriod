@@ -1,6 +1,18 @@
 /* ==========================================
    PÁGINA DE NOTICIAS - LAYOUT COMO LA IMAGEN
    ========================================== */
+:root {
+    --azul-principal: #2563EB;
+    --azul-claro: #3B82F6;
+    --azul-oscuro: #1D4ED8;
+
+    --verde-principal: #22C55E;
+    --verde-oscuro: #16A34A;
+    --verde-agua: #10B981;
+
+    --fondo-claro: #ECFEFF;
+    --texto-oscuro: #0F172A;
+}
 
 .noticias-container {
     max-width: 1400px;
@@ -10,7 +22,7 @@
 
 /* Hero Section para Noticias */
 .noticias-hero {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, var(--azul-principal) 0%, var(--verde-agua) 100%);
     border-radius: 20px;
     padding: 60px 40px;
     text-align: center;

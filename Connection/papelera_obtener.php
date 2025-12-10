@@ -1,8 +1,8 @@
 <?php
 // papelera_obtener.php - Obtener elementos de la papelera
+
 header('Content-Type: application/json; charset=utf-8');
 session_start();
-
 $conn = new mysqli("localhost", "root", "", "periodico_psac");
 $conn->set_charset("utf8");
 
@@ -22,13 +22,11 @@ try {
             SUBSTRING(contenido, 1, 100) as titulo,
             contenido,
             area,
-            media,
-            NULL as imagen,
-            NULL as descripcion,
+            archivo,
+            creado as fecha_creacion,
             fecha_eliminacion,
             eliminado_por
         FROM publicaciones_papelera
-        WHERE fecha_eliminacion IS NOT NULL
         ORDER BY fecha_eliminacion DESC
     ";
 
@@ -45,15 +43,13 @@ try {
             id,
             'noticia' as tipo,
             titulo,
-            NULL as contenido,
-            area,
-            NULL as media,
-            imagen,
             descripcion,
+            categoria as area,
+            imagen_principal,
+            creado as fecha_creacion,
             fecha_eliminacion,
             eliminado_por
         FROM noticias_papelera
-        WHERE fecha_eliminacion IS NOT NULL
         ORDER BY fecha_eliminacion DESC
     ";
 
